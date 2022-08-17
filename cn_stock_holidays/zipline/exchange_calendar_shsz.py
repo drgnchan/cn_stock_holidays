@@ -5,8 +5,8 @@ import pytz
 from zipline.utils.memoize import remember_last, lazyval
 import warnings
 
-from zipline.utils.calendars import TradingCalendar
-from zipline.utils.calendars.trading_calendar import days_at_time, NANOS_IN_MINUTE
+from zipline.utils.calendar_utils import TradingCalendar
+from zipline.utils.calendar_utils.trading_calendar import days_at_time, NANOS_IN_MINUTE
 import numpy as np
 import pandas as pd
 
@@ -29,7 +29,7 @@ class SHSZExchangeCalendar(TradingCalendar):
 
     Sample Code in ipython:
 
-    > from zipline.utils.calendars import *
+    > from zipline.utils.calendar_utils import *
     > from cn_stock_holidays.zipline.exchange_calendar_shsz import SHSZExchangeCalendar
     > register_calendar("SHSZ", SHSZExchangeCalendar(), force=True)
     > c=get_calendar("SHSZ")
