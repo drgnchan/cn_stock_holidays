@@ -6,7 +6,8 @@ from zipline.utils.memoize import remember_last, lazyval
 import warnings
 
 from zipline.utils.calendar_utils import TradingCalendar
-from zipline.utils.calendar_utils.trading_calendar import days_at_time, NANOS_IN_MINUTE
+from trading_calendars.utils import days_at_time
+from zipline.gens import NANOS_IN_MINUTE
 import numpy as np
 import pandas as pd
 
